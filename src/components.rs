@@ -20,9 +20,3 @@ pub struct LeftMover {}
 
 #[derive(Component, Debug)]
 pub struct Player {}
-
-#[derive(PartialEq, Copy, Clone)]
-pub enum TileType {
-    Wall,
-    Floor,
-}

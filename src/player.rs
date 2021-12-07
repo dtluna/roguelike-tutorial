@@ -2,8 +2,7 @@ use rltk::{Rltk, VirtualKeyCode};
 use specs::prelude::*;
 use std::cmp::{max, min};
 
-use crate::components::{Player, Position, TileType};
-use crate::map::xy_to_idx;
+use super::{xy_to_idx, Player, Position, State, TileType};
 
 pub fn try_move_player(delta_x: i32, delta_y: i32, ecs: &mut World) {
     let mut positions = ecs.write_storage::<Position>();
@@ -19,7 +18,7 @@ pub fn try_move_player(delta_x: i32, delta_y: i32, ecs: &mut World) {
     }
 }
 
-pub fn player_input(gs: &mut super::State, ctx: &mut Rltk) {
+pub fn player_input(gs: &mut State, ctx: &mut Rltk) {
     // Player movement
     match ctx.key {
         None => {} // Nothing happened
