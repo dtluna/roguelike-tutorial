@@ -1,4 +1,4 @@
-use rltk::{GameState, Rltk, RGB};
+use rltk::{GameState, Rltk};
 use specs::prelude::*;
 
 mod components;
